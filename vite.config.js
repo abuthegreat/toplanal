@@ -10,8 +10,8 @@ export default defineConfig({
     "process.env": {},
   },
   server: {
-    host: "192.168.68.106", // Allows access from your local network
-    port: 5173, // You can set any port number you prefer
+    host: "localhost", // Allows access from your local network
+    port: 3005, // You can set any port number you prefer
   },
   plugins: [react()],
 });

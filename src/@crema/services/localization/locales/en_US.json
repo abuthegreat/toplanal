@@ -452,6 +452,7 @@
   "invoice.accounting": "Accounting",
   "sidebar.app.dashboard.crypto": "Test Module",
   "sidebar.app.dashboard.campaign": "Campaign",
+  "sidebar.app.dashboard.home": "Home",
   "sidebar.app.metrics": "Metrics",
   "sidebar.app.widgets": "Widgets",
   "sidebar.apps": "Apps",

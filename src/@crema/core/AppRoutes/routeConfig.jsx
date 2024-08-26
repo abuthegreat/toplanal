@@ -63,13 +63,22 @@ const routesConfig = [
         url: 'toplanal/CampaignPage',
       },
       {
+        id: 'home',
+        title: 'HomePage',
+        messageId: 'sidebar.app.dashboard.home',
+        type: 'item',
+        permittedRole: [RoutePermittedRole.Admin, RoutePermittedRole.User],
+        icon: <VscTable />,
+        url: 'toplanal/HomePage',
+      },
+      {
         id: 'product_detail',
         title: 'Product Detail',
         messageId: 'sidebar.ecommerce.productDetail',
         type: 'item',
         permittedRole: [RoutePermittedRole.User],
         url: '/ecommerce/product_detail',
-      },/*
+      },
       {
         id: 'crm',
         title: 'CRM',
@@ -132,9 +141,9 @@ const routesConfig = [
         permittedRole: [RoutePermittedRole.User],
         icon: <RiDashboardLine />,
         url: '/dashboards/widgets',
-      },*/
+      },
     ],
-  },/*
+  },
   {
     id: 'apps',
     title: 'Apps',
@@ -1564,6 +1573,6 @@ const routesConfig = [
       },
     ],
   },
-*/
+
 ];
 export default routesConfig;
