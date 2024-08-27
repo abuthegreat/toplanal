@@ -107,7 +107,7 @@ const ProductView = ({ product }) => {
         );
     };
   return (
-    <Grid item sm={12} md={8}>
+    <Grid item sm={12}>
         <Box component='h3' sx={{ color: 'text.primary', fontSize: 20, mb: 1 }}>
         <BuyerProgressBar
             totalBuyerRequired={product.totalBuyerRequired}

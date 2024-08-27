@@ -12,7 +12,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { styled } from '@mui/material/styles';
 import { useInfoViewActionsContext } from '../../../../@crema/context/AppContextProvider/InfoViewContextProvider';
-import { postDataApi } from '../../../../@crema/hooks/APIHooks';
 
 const BrainHubSliderRoot = styled(Box)(() => {
     return {
