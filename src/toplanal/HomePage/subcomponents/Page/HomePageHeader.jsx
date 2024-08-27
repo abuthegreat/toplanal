@@ -55,46 +55,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const HomePageHeader = () => {
   return (
     <>
-      <AppBar
-        position="static"
-        color="primary"
-        sx={{
-          boxShadow: 'none',
-          backgroundColor: '#fff',
-          borderBottom: '1px solid #e0e0e0',
-          borderRadius: '8px', // Köşe yuvarlama
-          marginBottom: '16px', // Alt boşluk
-        }}
-      >
-        <Toolbar sx={{ justifyContent: 'space-between', padding: '0 20px' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* Logo */}
-            <img src="/assets/images/Logot.jpg" alt="Toplanal Logo" style={{ height: '60px', marginRight: '10px' }} />
-            {/* Estetik Toplanal Yazısı */}
-            <Typography variant="h3" component="div" sx={{ color: '#333', fontWeight: 'bold', display: 'flex' }}>
-              ToplanAl
-             
-            </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* Arama Çubuğu */}
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Kampanyalarda Ara…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
-            {/* Sign In Butonu */}
-            <Button variant="contained" color="primary" sx={{ fontWeight: 'bold', ml: 2 }}>
-              Sign In
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
-
       <Box sx={{ backgroundColor: '#f7f7f7', py: 3, borderRadius: '8px', marginBottom: '16px' }}>
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

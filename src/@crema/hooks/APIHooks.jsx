@@ -58,6 +58,8 @@ export const useGetDataApi = (
             data.data.totalBuyerRequired = 100;
             data.data.currentBuyer = 40;
             data.data.campaignStarterText = 'Bu ürünü TEMUdan hep beraber almak isteyen arkadaşları toplanmaya davet ediyorum!';
+            data.data.campaignStartDate = '2024-10-01';
+            data.data.campaignEndDate = '2024-10-31';
           }
           resStateRef.current = false;
           if (!didCancelRef.current) {

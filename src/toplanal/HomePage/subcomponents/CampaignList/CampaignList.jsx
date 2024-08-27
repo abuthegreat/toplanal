@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Grid from '@mui/material/Grid';
 import CampaignCard from './CampaignCard';
-
+import {useParams} from "react-router-dom";
+import { useGetDataApi } from '@crema/hooks/APIHooks';
 const CampaignList = () => {
-  const campaigns = [
+/*  const campaigns = [
     {
       id: 1,
       title: 'Kampanya 1',
@@ -88,15 +89,57 @@ const CampaignList = () => {
       creatorName: 'Ahmet Burak Yildirim',
       creatorImage: '/assets/images/user1.jpg',
     },
-  ];
+    {
+      id: 7,
+      title: 'Kampanya 3',
+      description: 'Bu, Kampanya 3\'ün açıklamasıdır.',
+      image: 'subcomponents/img1.jpg',
+      price: 65,
+      rating: 4,
+      startDate: '2024-10-01',
+      endDate: '2024-10-31',
+      collectedAmount: 900,
+      targetAmount: 1200,
+      creatorName: 'Ahmet Burak Yildirim',
+      creatorImage: '/assets/images/user1.jpg',
+    },
+    {
+      id: 8,
+      title: 'Kampanya 3',
+      description: 'Bu, Kampanya 3\'ün açıklamasıdır.',
+      image: 'subcomponents/img1.jpg',
+      price: 65,
+      rating: 4,
+      startDate: '2024-10-01',
+      endDate: '2024-10-31',
+      collectedAmount: 900,
+      targetAmount: 1200,
+      creatorName: 'Ahmet Burak Yildirim',
+      creatorImage: '/assets/images/user1.jpg',
+    },
+  ];*/
+  const { id } = useParams();
+  const [{ apiData: currentProduct, loading }, { setQueryParams }] =
+      useGetDataApi('/api/ecommerce/get', {}, {}, false);
+
+  useEffect(() => {
+    setQueryParams({ id: 7 });
+  }, [id]);
+
 
   return (
     <Grid container spacing={4}>
-      {campaigns.map((campaign) => (
-        <Grid item xs={12} sm={6} md={4} key={campaign.id}>
-          <CampaignCard campaign={campaign} />
-        </Grid>
-      ))}
+      {
+        !loading && currentProduct ? (
+            [currentProduct].map((campaign, index) => (
+                <Grid key={index} item xs={12} sm={6} md={4}>
+                <CampaignCard campaign={campaign} />
+                </Grid>
+            ))
+        ) : (
+            "loading"
+        )
+      }
     </Grid>
   );
 };

@@ -28,7 +28,7 @@ const AppLogo = () => {
           mt: 1,
           display: { xs: 'none', md: 'block' },
           '& img': {
-            height: { xs: 25, sm: 30 },
+            height: { xs: 25, sm: 50 },
           },
         }}
       >
