@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Box, IconButton, LinearProgress } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography, Box, IconButton, LinearProgress, Avatar, Divider } from '@mui/material';
 import { FavoriteBorder, ShoppingCart } from '@mui/icons-material';
 
 const CampaignCard = ({ campaign }) => {
@@ -22,6 +22,7 @@ const CampaignCard = ({ campaign }) => {
         </Box>
       </Box>
       <CardContent>
+
         <Typography gutterBottom variant="h6" component="div">
           {campaign.title}
         </Typography>
@@ -44,6 +45,7 @@ const CampaignCard = ({ campaign }) => {
           </Typography>
           <LinearProgress variant="determinate" value={calculateProgress()} />
         </Box>
+        
 
         {/* Sadece Fiyat */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 2 }}>
@@ -58,6 +60,17 @@ const CampaignCard = ({ campaign }) => {
               <ShoppingCart />
             </IconButton>
           </Box>
+        </Box>
+
+         {/* Çizgi (Divider) */}
+        <Divider sx={{ my: 2 }} />
+
+        {/* Kampanyayı açan kişinin fotoğrafı ve ismi */}
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+          <Avatar src={campaign.creatorImage} alt={campaign.creatorName} sx={{ width: 40, height: 40, mr: 2 }} />
+          <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+            {campaign.creatorName}
+          </Typography>
         </Box>
       </CardContent>
     </Card>

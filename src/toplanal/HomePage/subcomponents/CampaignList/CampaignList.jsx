@@ -15,6 +15,8 @@ const CampaignList = () => {
       endDate: '2024-08-31',
       collectedAmount: 750, // Toplanan miktar
       targetAmount: 1000,   // Hedef miktar
+      creatorName: 'John Doe',
+      creatorImage: '/assets/images/user1.jpg',
     },
     {
       id: 2,
@@ -27,6 +29,8 @@ const CampaignList = () => {
       endDate: '2024-09-30',
       collectedAmount: 500,
       targetAmount: 1000,
+      creatorName: 'John Doe',
+      creatorImage: '/assets/images/user1.jpg',
     },
     {
       id: 3,
@@ -39,6 +43,8 @@ const CampaignList = () => {
       endDate: '2024-10-31',
       collectedAmount: 900,
       targetAmount: 1200,
+      creatorName: 'John Doe',
+      creatorImage: '/assets/images/user1.jpg',
     },
     {
       id: 4,
@@ -51,6 +57,8 @@ const CampaignList = () => {
       endDate: '2024-08-31',
       collectedAmount: 750, // Toplanan miktar
       targetAmount: 1000,   // Hedef miktar
+      creatorName: 'John Doe',
+      creatorImage: '/assets/images/user1.jpg',
     },
     {
       id: 5,
@@ -63,6 +71,8 @@ const CampaignList = () => {
       endDate: '2024-09-30',
       collectedAmount: 500,
       targetAmount: 1000,
+      creatorName: 'John Doe',
+      creatorImage: '/assets/images/user1.jpg',
     },
     {
       id: 6,
@@ -75,6 +85,8 @@ const CampaignList = () => {
       endDate: '2024-10-31',
       collectedAmount: 900,
       targetAmount: 1200,
+      creatorName: 'Ahmet Burak Yildirim',
+      creatorImage: '/assets/images/user1.jpg',
     },
   ];
 
